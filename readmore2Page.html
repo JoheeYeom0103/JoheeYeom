@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="navigatorStyling.css">
+    <link rel="stylesheet" href="readmore2Styling.css">
+    <!-- CSS Files -->
+
+    <!--Font Files-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Font Files-->
+</head>
+<body>
+
+    <div id="navigator">
+        <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
+            <span class="flier" id="flower1">
+                <img src="flower1-01.svg">
+            </span>
+            <span class="letters" id="letter1">
+                <img src="nav1-01.svg">
+            </span>
+        </div>
+
+        <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
+            <span class="flier" id="flower2">
+                <img src="flower2-01.svg">
+            </span>
+            <span class="letters" id="letter2">
+                <img src="nav2-01.svg">
+            </span>
+        </div>
+
+        <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
+            <span class="flier" id="flower3">
+                <img src="flower3-01.svg">
+            </span>
+            <span class="letters" id="letter3">
+                <img src="nav3-01.svg">
+            </span>
+        </div>
+    </div>
+
+    <div id="menuCover">
+        <img src="menucover-01.svg">
+    </div>
+
+    <div id="worksLine">
+        <img src="worksLine-01.svg" style="height: 100vh;">
+    </div>
+
+    <div id="gallery">
+
+        <figure class="work" id="work1"> 
+            <div class="image">
+                <div class="image-container">
+                    <img src="soundofcolor_3.png" alt="soundofcolor_1">
+                    <div class="image-subcontainer">
+                        <img src="soundofcolor_1.png" alt="soundofcolor_2">
+                        <img src="soundofcolor_2.png" alt="soundofcolor_3">
+                    </div>
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="paragraph"><span class="emphasis">“Sound of Colour”</span>is an interactive therapeutic VR game where the user becomes the teenage colour-blind girl who dreams of becoming a foley artist. The user goes on a quest to search for different sounds while colouring different areas in her town every time she finds a sound source to complete her soundscape project.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="work" id="work2">
+            <div class="image">
+                <div class="image-container">
+                    <img src="soundofcolor_4.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Game Progressions</p>
+                <p class="paragraph">The game progresses as the player finishes colouring each area and moves on to the next area. The user starts their quest from her house garden and moves towards the whole town. Every time the user completes each stage, the wavelength in the top right corner becomes longer which shows they are getting closer to the destination and completion of the soundscape project. Throughout the game, the user gets to navigate through a house garden, lake park, and square searching for different sound sources each area provides by deep-listening to the spatialized sound.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="work" id="work3">
+            <div class="image">
+                <div class="image-container">
+                    <img src="soundofcolor_5.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Motivation</p>
+                <p class="paragraph">The project intended to use the features of VR first- person view, such as subjective visuals and surround audio, to foster awareness of colour blindness.  The VR video is showcased at a video exhibition at the Sawchuck Theatre.</p>
+            </figcaption>
+        </figure>
+
+        <div class="work" id="work4">
+            <!-- To embed a YouTube video using an <iframe>, you need to use the embed link, which follows the format https://www.youtube.com/embed/video_id. -->
+            <iframe src="https://www.youtube.com/embed/254rhn8KqWI" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <script>
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
+        }
+
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
+        
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                
+                // Check the value of id and set the appropriate URL
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                // Redirect to the determined URL
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    color: #003853; 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('subbackground-01.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#menuCover {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menuCover img {
+    height: 17em;
+}
+
+#aboutLine {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+
+#text {
+    z-index: 1; 
+    font-size: 1.1em;
+    color: #003853; 
+    margin: 10em 0em 5em 2em;
+    width: 35%; 
+    line-height: 1.8em;
+}
+
+#nameHighlight {
+    font-weight: bold;
+    font-size: 3em;
+    font-family: 'Elsie', cursive;
+}
+
+#picture {
+    margin-top: 5em;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    #aboutLine {
+        display: none;
+    }
+
+    #content {
+        /*How to center multiple contents in flex 
+        set the desired width 
+        -> set horizontal margin to be auto
+        -> justify-content: center */
+        /* flex-direction: column + justify-content: center --> hroizontal center
+           flex-direction: row + align-item: center -> vertical center*/
+        width: 70%; 
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        margin-top: 2em;
+        position: relative;
+        top: 10em;
+    }
+
+    #text {
+        width: 100%;
+        margin-top: 1em; 
+    }
+    
+}
+

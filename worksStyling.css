@@ -1,0 +1,188 @@
+body {
+    color: #003853; 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('subbackground-01.svg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+
+#menuCover {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#worksLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+
+#menuCover img {
+    height: 17em;
+}
+
+.content h2 {
+    font-size: 1.8em;
+    color: #003853; 
+}
+.content p {
+    font-size: 1.2em;
+    color: #003853; 
+}
+
+#gallery {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#work1, #work4 {
+    display: flex;
+    justify-content: center;
+    width: 65%; /* Specify the desired width */
+    box-sizing: border-box; 
+    margin: 15em auto 5em auto; /* Horizontally center the container */
+}
+
+#work4 {
+    margin: 0em auto 5em auto;
+}
+
+#work1 .image, #work4 .image{
+    text-align: center;
+}
+
+#work1 .content, #work4 .content {
+    padding-left: 3em;
+    max-width: 50%;
+}
+
+#work2, #work3 {
+    width: 85%; 
+    padding-bottom: 5em;
+}
+
+#work2 img,
+#work3 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container {
+    position: relative;
+    width: 80%;
+    padding-top: calc(9 / 16 * 70%); /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#work1 .content, #work2 .content, #work3 .content {
+    display: block;
+    margin: 0;
+    text-align: left;
+    width: 80%;
+}
+.read-more-btn {
+    background-color: #003853;
+    color: white;
+    padding: 0.7em;
+    border-color: #003853;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-family: 'Elsie';
+    font-size: 1.2em;
+    margin-left: 0em;
+}
+
+.read-more-btn:hover {
+	background-color: #94B58E;
+    border-color: #94B58E;
+}
+@media (max-width: 600px) {
+    #gallery {
+        position: relative;
+        left: 0;
+	}
+    
+	#worksLine {
+        display: none;
+    }
+    
+    #work1{
+        display: block;
+        margin-top: 20em;
+        margin-bottom: 5em;
+        width: 100%; 
+        box-sizing: border-box; 
+	}
+
+
+    #work4{
+        display: block;
+        margin-bottom: 10em;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    #work1 .image {
+    	margin-bottom: 2em;
+    }
+
+    #work2 img,
+    #work3 img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
+        overflow: hidden;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    
+
+    
+    #work1 .content, #work2 .content, #work3 .content, #works4 .content {
+        display: block;
+    	margin: 0;
+        text-align: left;
+        width: 100%;
+    }
+}

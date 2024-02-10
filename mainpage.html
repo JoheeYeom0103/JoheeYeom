@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account Page</title>
+        
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="navigatorStyling.css">
+        <link rel="stylesheet" href="mainStyling.css">
+        <!-- CSS Files -->
+
+        <!--Font Files-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!--Font Files-->
+
+    </head>
+    <body>
+
+        <div id="navigator">
+            <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
+                <span class="flier" id="flower1">
+                    <img src="flower1-01.svg">
+                </span>
+                <span class="letters" id="letter1">
+                    <img src="nav1-01.svg">
+                </span>
+            </div>
+
+            <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
+                <span class="flier" id="flower2">
+                    <img src="flower2-01.svg">
+                </span>
+                <span class="letters" id="letter2">
+                    <img src="nav2-01.svg">
+                </span>
+            </div>
+
+            <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
+                <span class="flier" id="flower3">
+                    <img src="flower3-01.svg">
+                </span>
+                <span class="letters" id="letter3">
+                    <img src="nav3-01.svg">
+                </span>
+            </div>
+        </div>
+
+        <div id="name">
+        
+            <div class="letter-container">
+                <div class="non-col"><img src="letter1_n-01.svg"></div>
+                <div class="col"><img src="letter1_c-01.svg"></div>
+            </div>
+            <div class="letter-container">
+                <div class="non-col"><img src="letter2_n-01.svg"></div>
+                <div class="col"><img src="letter2_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter3_n-01.svg"></div>
+                <div class="col"><img src="letter3_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter4_n-01.svg"></div>
+                <div class="col"><img src="letter4_c.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter5_n-01.svg"></div>
+                <div class="col"><img src="letter5_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter6_n-01.svg"></div>
+                <div class="col"><img src="letter6_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter7_n-01.svg"></div>
+                <div class="col"><img src="letter7_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter8_n-01.svg"></div>
+                <div class="col"><img src="letter8_c-01.svg"></div>
+            </div>
+
+            <div class="letter-container">
+                <div class="non-col"><img src="letter9_n-01.svg"></div>
+                <div class="col"><img src="letter9_c-01.svg"></div>
+            </div>
+
+        </div>
+
+        <script>
+                
+              function startSpinning(id) {
+               const flower = document.querySelector(`#${id} .flier`);
+               flower.classList.add('rotate');
+             }
+
+             function stopSpinning(id) {
+               const flower = document.querySelector(`#${id} .flier`);
+               flower.classList.remove('rotate');
+             }
+             
+              function startOpening(id) {
+              const flower = document.querySelector(`#${id} .flier`);
+              flower.classList.add('fly');
+              flower.addEventListener('animationend', function () {
+              flower.classList.remove('fly');
+                
+               // Check the value of id and set the appropriate URL
+              let redirectUrl;
+              switch (id) {
+                case 'about':
+                  redirectUrl = 'aboutPage.html';
+                  break;
+                case 'works':
+                  redirectUrl = 'worksPage.html';
+                  break;
+                case 'contact':
+                  redirectUrl = 'contactPage.html';
+                  break;
+                default:
+                  redirectUrl = '#';
+              }
+              // Redirect to the determined URL
+              window.location.href = redirectUrl;
+            });
+            }
+        </script>
+
+    </body>
+</html>

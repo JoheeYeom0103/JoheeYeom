@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="navigatorStyling.css">
+    <link rel="stylesheet" href="readmore3Styling.css">
+    <!-- CSS Files -->
+
+    <!--Font Files-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Font Files-->
+</head>
+<body>
+
+    <div id="navigator">
+        <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
+            <span class="flier" id="flower1">
+                <img src="flower1-01.svg">
+            </span>
+            <span class="letters" id="letter1">
+                <img src="nav1-01.svg">
+            </span>
+        </div>
+
+        <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
+            <span class="flier" id="flower2">
+                <img src="flower2-01.svg">
+            </span>
+            <span class="letters" id="letter2">
+                <img src="nav2-01.svg">
+            </span>
+        </div>
+
+        <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
+            <span class="flier" id="flower3">
+                <img src="flower3-01.svg">
+            </span>
+            <span class="letters" id="letter3">
+                <img src="nav3-01.svg">
+            </span>
+        </div>
+    </div>
+
+    <div id="menuCover">
+        <img src="menucover-01.svg">
+    </div>
+
+    <div id="worksLine">
+        <img src="worksLine-01.svg" style="height: 100vh;">
+    </div>
+
+    <div id="gallery">
+
+        <figure class="work" id="work1">
+            <div class="image">
+                <div class="image-container">
+                    <img src="whaleforestmain.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="paragraph"><span class="emphasis">Whale forest</span> is an interactive ambient VR where the user can fly on a whale, navigating through the enchanted whale forest where the ocean meets the space.</p>
+            </figcaption>
+        </figure>
+
+
+        <figure class="work" id="work2">
+            <div class="image">
+                <div class="image-container">
+                    <img src="whaleforest_2.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Visual Concept</p>
+                <p class="paragraph">Within this virtual forest, fantastical oceanic-themed elements abound, including Starfish stepping stones, a Shell Swing, Ocean Plants, and Sea Pearl Lamps.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="work" id="work3">
+            <div class="image">
+                <div class="image-container">
+                    <img src="whaleforest_3.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Inspiration & Interactivity</p>
+                <p class="paragraph">Inspired by bioluminescence, a captivating natural phenomenon found in radiant marine creatures, the interactive forest dynamically illuminates the pathways in response to the whale's movements. </p>
+            </figcaption>
+        </figure>
+
+        <div class="work" id="work4">
+            <iframe src="https://www.youtube.com/embed/zB5NKOELLeE?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    
+
+    <script>
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
+        }
+
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
+        
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                
+                // Check the value of id and set the appropriate URL
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                // Redirect to the determined URL
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
+    
+</body>
+</html>
