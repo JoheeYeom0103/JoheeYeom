@@ -55,7 +55,7 @@ body {
 @media (max-width: 600px) {
     #name {
         justify-content: flex-start;
-        margin-top: 40%;
+        margin-top: 50%;
         margin-left: 10%;
         width: 75%;
     }
