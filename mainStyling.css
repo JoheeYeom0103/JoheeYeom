@@ -12,8 +12,7 @@ body {
     flex-wrap: wrap;
     justify-content: center; 
     align-items: center; 
-    margin-top: 22%; 
-    border: red 1px solid;
+    margin-top: 50em; 
 }
 
 .letter-container {
