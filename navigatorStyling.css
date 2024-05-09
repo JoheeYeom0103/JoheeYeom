@@ -2,16 +2,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 1em;
+    margin-left: 2em;
+    margin-top: 2em;
     z-index: 999;
 }
 
 #about, #works, #contact {
-    margin-left: 2.4em;
     margin-bottom: 0.6em;
     width: fit-content;
 }
-
 
 #flower1, #flower2, #flower3 {
     display: inline-block;
@@ -41,6 +40,17 @@
     height: 2.3rem;
 }
 
+#menuCover {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menuCover img {
+    height: 17em;
+}
+
 @keyframes rotate {
 from {
     transform: rotate(0deg);
@@ -59,3 +69,26 @@ to {
 }
 }
 
+@media (max-width: 800px) {
+    #menuCover {
+        max-width: 100%;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 450px) {
+
+    #navigator {
+        margin-left: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    #menuCover img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .letters img {
+        height: 1.8rem;
+    }
+}

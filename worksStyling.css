@@ -14,24 +14,11 @@ a {
     color: white; 
 }
 
-
-#menuCover {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 #worksLine {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-}
-
-
-#menuCover img {
-    height: 17em;
 }
 
 .content h2 {
@@ -52,12 +39,17 @@ a {
     justify-content: center;
 }
 
+#work0 {
+    margin-top: 15em;
+}
+
+
 #work1, #work4 {
     display: flex;
     justify-content: center;
-    width: 65%; /* Specify the desired width */
+    width: 70%;
     box-sizing: border-box; 
-    margin: 15em auto 5em auto; /* Horizontally center the container */
+    margin: 0em auto 5em auto; 
 }
 
 #work4 {
@@ -73,40 +65,34 @@ a {
     max-width: 50%;
 }
 
-#work2, #work3 {
-    width: 85%; 
+#work2, #work3, #work0 {
+    width: 70%; 
+    height: 100%;
     padding-bottom: 5em;
 }
 
-#work2 img,
-#work3 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 .image-container {
-    position: relative;
-    width: 80%;
-    padding-top: calc(9 / 16 * 70%); /* 16:9 aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
     overflow: hidden;
 }
 
 .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-#work1 .content, #work2 .content, #work3 .content {
+
+#work1 .content, #work2 .content, #work3 .content, #work0 .content {
     display: block;
-    margin: 0;
-    text-align: left;
-    width: 80%;
+    text-align: center;
+    width: 70%;
 }
+
 .read-more-btn {
     background-color: #003853;
     color: white;
@@ -116,14 +102,18 @@ a {
     cursor: pointer;
     font-family: 'Elsie';
     font-size: 1.2em;
-    margin-left: 0em;
 }
 
 .read-more-btn:hover {
 	background-color: #94B58E;
     border-color: #94B58E;
 }
-@media (max-width: 600px) {
+
+#work0 .image {
+    z-index: -999;
+}
+
+@media (max-width: 800px) {
     #gallery {
         position: relative;
         left: 0;
@@ -132,15 +122,22 @@ a {
 	#worksLine {
         display: none;
     }
+
+    #menuCover {
+        max-width: 100%;
+        width: 100%; 
+    }
+
+    #work0 {
+        margin-top: 20em;
+    }
     
     #work1{
         display: block;
-        margin-top: 20em;
         margin-bottom: 5em;
         width: 100%; 
         box-sizing: border-box; 
 	}
-
 
     #work4{
         display: block;
@@ -149,14 +146,14 @@ a {
         box-sizing: border-box; 
     }
     
-    #work1 .image {
-    	margin-bottom: 2em;
+    #work0, #work1, #work2, #work3, #work4 {
+        width: 85%;
     }
 
     #work2 img,
-    #work3 img {
+    #work3 img, 
+    #work0 img {
         max-width: 100%;
-        height: auto;
         display: block;
     }
 
@@ -177,12 +174,19 @@ a {
         object-fit: cover; 
     }
     
-
+    #work1 .content, #work4 .content {
+        padding-left: 0;
+        max-width: 100%;
+    }
     
-    #work1 .content, #work2 .content, #work3 .content, #works4 .content {
+    #work0 .content, #work1 .content, #work2 .content, #work3 .content, #work4 .content {
         display: block;
     	margin: 0;
-        text-align: left;
+        text-align: center;
         width: 100%;
+    }
+
+    @media (max-width: 450px) {
+        
     }
 }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel To Fill Details</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="navigatorStyling.css">
+    <link rel="stylesheet" href="readmore0Styling.css">
+    <!-- CSS Files -->
+
+    <!--Font Files-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Font Files-->
+</head>
+<body>
+
+    <div id="navigator">
+        <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
+            <span class="flier" id="flower1">
+                <img src="flower1-01.svg">
+            </span>
+            <span class="letters" id="letter1">
+                <img src="nav1-01.svg">
+            </span>
+        </div>
+
+        <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
+            <span class="flier" id="flower2">
+                <img src="flower2-01.svg">
+            </span>
+            <span class="letters" id="letter2">
+                <img src="nav2-01.svg">
+            </span>
+        </div>
+
+        <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
+            <span class="flier" id="flower3">
+                <img src="flower3-01.svg">
+            </span>
+            <span class="letters" id="letter3">
+                <img src="nav3-01.svg">
+            </span>
+        </div>
+    </div>
+
+    <div id="menuCover">
+        <img src="menucover-01.svg">
+    </div>
+
+    <div id="worksLine">
+        <img src="worksLine-01.svg" style="height: 100vh;">
+    </div>
+
+    <div id="gallery">
+
+        <figure class="work" id="work1">
+            <div class="image">
+                <div class="image-container">
+                    <img src="feeltofill_guide.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Inspiration & Interactivity</p>
+                <p class="paragraph">
+                    “If there is a hole on a ground remaining unfilled, people may question its presence, wondering 'Why is there a hole?' Yet, once the hole is filled, they will understand, acknowledging 'That is why there was a planting hole.'” The project began from this small observation of a planting hole. As a planting hole is never wasted but used to bloom a new life, this game seeks to encourage the players to find hope in greater purpose their holes can hold. 
+                    This project also drew inspiration from childhood memories of message beans and drawing diary homework. Message beans represented monthly goals, with actions taken at each watering until they reached full growth. Additionally, the drawing diary homework encouraged me to document nice action taken over the weekend to cultivate a positive self-image. These memories, combined with the imagery of planting holes, have formed the foundation of the game's core concept.
+                </p>
+            </figcaption>
+        </figure>
+
+
+        <figure class="work" id="work2">
+            <div class="image">
+                <div class="image-container">
+                    <img src="feeltofill_feelyourhole.jpg" alt="Whale Forest">
+                    <img src="feeltofill_fallinghole.jpg" alt="Whale Forest">
+                    <img src="feeltofill_plantseed.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Game Progress</p>
+                <p class="paragraph">Throughout the game, the players interactively engage with visualization of invisible feelings. As the game begins, the player enters into the ‘Feel your hole’ scene where they visit 6 different categories of emotions and select 3 emotional holes. The selected holes fall down into the ‘Fill your hole’ scene encouraging transition from reflection to action. Drawing the connection among their holes, they are asked to plant a seed with their word of goal written on it. Subsequently, they are prompted to take an action to fill their selected hole and upload an accompanying image, which is ground into the sand filling the hole. Upon completion of filling the hole, their planted seed sprouts into a vibrant plant. </p>
+            </figcaption>
+        </figure>
+
+        <figure class="work" id="work3">
+            <div class="image">
+                <div class="image-container">
+                    <img src="feeltofill_grindingsand.jpg" alt="Whale Forest">
+                    <img src="feeltofill_plant.jpg" alt="Whale Forest">
+                    <img src="feeltofill_gallery.jpg" alt="Whale Forest">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Visual Concept</p>
+                <p class="paragraph">The design of the "Feel your hole" scene draws inspiration from the mental health term "Spiralling," which describes a cycle of negative thought patterns that can escalate and become overwhelming (source: https://www.calm.com/blog/how-to-stop-spiraling). To visualize the often overlooked feelings due to its invisible nature, I incorporated the spiral motif, represented by a deep hole at the center with surrounding cures. As a spiral can be seen as moving inward or outward from the hole, I designed for users to enter into each hole for inner reflection and take the holes outside of the hole for action. 
+                <br/><br/> During the transition into the ‘Fill your hole’ scene, I incorporated the famous perception test image to visually symbolize the planting hole imagery. This illusion, where the same image can be perceived as either a glass or a face, mirrors the concept of the planting hole—whether it remains unfilled or is eventually filled changes our perception of the hole. By inserting this image in the middle of the transition, I aimed to signify the start of thought transition. Using this visual metaphor, I sought to reframe the idea of our emotional holes from mere negative feelings to vessels for a new perspective.</p>
+            </figcaption>
+        </figure>
+
+        <div class="work" id="work4">
+            <iframe src="https://www.youtube.com/embed/oXij11U7Dyo?rel=0" frameborder="0" allowfullscreen></iframe>
+            <p class="emphasis"></p><a href="https://joy5767.itch.io/feel-to-fill" target="_blank" style="text-decoration:none; background:#94B58E; color: white; padding: 0.5em; border-radius: 2px;" ><b>Link to the game</b></a>
+        </div>
+    </div>
+
+    
+
+    <script>
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
+        }
+
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
+        
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                
+                // Check the value of id and set the appropriate URL
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                // Redirect to the determined URL
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
+    
+</body>
+</html>

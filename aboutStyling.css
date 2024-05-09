@@ -12,17 +12,6 @@ body {
     justify-content: center; 
 }
 
-#menuCover {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#menuCover img {
-    height: 17em;
-}
-
 #aboutLine {
     position: absolute;
     top: 0;
@@ -31,6 +20,7 @@ body {
 
 #content {
     width: 100%;
+    margin-left: -20%;
     display: flex;
     flex-direction: row; 
     align-items: center; 
@@ -49,12 +39,12 @@ body {
 #nameHighlight {
     font-weight: bold;
     font-size: 3em;
-    font-family: 'Elsie', cursive;
+    font-family: 'Elsie';
 }
 
 #picture {
     margin-top: 5em;
-    z-index: -1;
+    z-index: -999;
 }
 
 @media (max-width: 800px) {
@@ -70,19 +60,27 @@ body {
         /* flex-direction: column + justify-content: center --> hroizontal center
            flex-direction: row + align-item: center -> vertical center*/
         width: 70%; 
-        margin: 0 auto; 
+        position: relative;
+        margin: 0em auto; 
         display: flex;
         flex-direction: column; 
         justify-content: center; 
-        margin-top: 2em;
         position: relative;
-        top: 10em;
+        top: 20em;
     }
 
     #text {
         width: 100%;
         margin-top: 1em; 
-    }
-    
+    }    
 }
+
+@media (max-width: 400px) {
+    #content {
+        top: 24em;
+    }
+}
+
+
+
 
