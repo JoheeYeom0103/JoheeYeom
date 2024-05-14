@@ -34,6 +34,17 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    display: flex;
+}
+
+#logo {
+    height: 9vh;
+    position: relative;
+    top: 1.5em;
+    right: 2em;
+}
+
+#line {
     height: 100vh;
 }
 

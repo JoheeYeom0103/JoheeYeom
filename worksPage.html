@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Page</title>
+    <title>Works Page</title>
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="navigatorStyling.css">
@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!--Font Files-->
 </head>
-<body>
 
+<body>
     <div id="navigator">
         <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
             <span class="flier" id="flower1">
@@ -43,14 +43,18 @@
                 <img src="nav3-01.svg">
             </span>
         </div>
+
+        <div id="worksLine">
+            <a href="index.html" onmouseover="document.getElementById('logo').src='logo_hover.png'" onmouseleave="document.getElementById('logo').src='logo.png'">
+                <img id="logo" src="logo.png">
+            </a>
+            <img id="line" src="worksLine-01.svg">
+        </div>
+        
     </div>
 
     <div id="menuCover">
         <img src="menucover-01.svg">
-    </div>
-
-    <div id="worksLine">
-        <img src="worksLine-01.svg" style="height: 100vh;">
     </div>
 
     <div id="gallery">
@@ -58,7 +62,7 @@
         <figure class="work" id="work0">
             <div class="image">
                 <div class="image-container">
-                    <img src="feeltofill_opening.jpg" alt="Feel to fill">
+                    <img src="feeltofill_main.jpg" alt="Feel to fill">
                 </div>
             </div>
             <figcaption class="content">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feel To Fill Details</title>
+    <title>Feel To Fill</title>
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="navigatorStyling.css">
@@ -43,14 +43,17 @@
                 <img src="nav3-01.svg">
             </span>
         </div>
+
+        <div id="worksLine">
+            <a href="index.html" onmouseover="document.getElementById('logo').src='logo_hover.png'" onmouseleave="document.getElementById('logo').src='logo.png'">
+                <img id="logo" src="logo.png">
+            </a>
+            <img id="line" src="worksLine-01.svg">
+        </div>
     </div>
 
     <div id="menuCover">
         <img src="menucover-01.svg">
-    </div>
-
-    <div id="worksLine">
-        <img src="worksLine-01.svg" style="height: 100vh;">
     </div>
 
     <div id="gallery">
@@ -140,7 +143,6 @@
                     default:
                         redirectUrl = '#';
                 }
-                // Redirect to the determined URL
                 window.location.href = redirectUrl;
             });
         }

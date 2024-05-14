@@ -8,14 +8,27 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column; /* Change to column to stack content vertically */
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start; 
 }
 
 #aboutLine {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    display: flex;
+}
+
+#logo {
+    height: 9vh;
+    position: relative;
+    top: 1.5em;
+    right: 2em;
+}
+
+#line {
+    height: 100vh;
 }
 
 #content {
@@ -25,8 +38,21 @@ body {
     flex-direction: row; 
     align-items: center; 
     justify-content: center;
+    margin-bottom: 0;
 }
 
+#resume {
+    margin-top: -4em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#resume p {
+    margin-left: 1em;
+}
 #text {
     z-index: 1; 
     font-size: 1.1em;
@@ -60,13 +86,14 @@ body {
         /* flex-direction: column + justify-content: center --> hroizontal center
            flex-direction: row + align-item: center -> vertical center*/
         width: 70%; 
-        position: relative;
-        margin: 0em auto; 
-        display: flex;
+        margin: 10em auto 0 auto; 
         flex-direction: column; 
         justify-content: center; 
+        align-items: center; 
+    }
+
+    #resume {
         position: relative;
-        top: 20em;
     }
 
     #text {

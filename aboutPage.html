@@ -54,50 +54,54 @@
         <p id="text"><span id="nameHighlight">Johee Yeom</span>, a purpose-driven interactive developer pursuing a Bachelor of Media Studies at the University of British Columbia Okanagan. Focusing on Interactive Digital Media Projection and Human-Computer Interaction (HCI), Johee aspires to become an app-based/VR intervention developer. Her creative process centers on translating purposeful ideas into interactive functionalities across various media forms. Throughout her university journey, Johee has dedicated herself to crafting impactful interactive media projects conveying universal messages</p>
     </div>
 
+    <div id="resume">
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:a4ec446a-eb42-4ed4-9cb4-237cc56d6e21">
+            <img src="save.svg" style="height: 3em;">
+        </a>
+        <p>Download PDF Resume</p>
+    </div>
+    
+
     <div id="aboutLine">
-        <img src="aboutline-01.svg" style="height: 100vh;">
+        <a href="index.html">
+            <img id="logo" src="logo.png" onmouseover="this.src='logo_hover.png'" onmouseleave="this.src='logo.png'">
+        </a>
+        <img id="line" src="aboutline-01.svg">
     </div>
 
     <script>
-            
-          function startSpinning(id) {
-           const flower = document.querySelector(`#${id} .flier`);
-           flower.classList.add('rotate');
-         }
-
-         function stopSpinning(id) {
-           const flower = document.querySelector(`#${id} .flier`);
-           flower.classList.remove('rotate');
-         }
-         
-          function startOpening(id) {
-          const flower = document.querySelector(`#${id} .flier`);
-          flower.classList.add('fly');
-          flower.addEventListener('animationend', function () {
-          flower.classList.remove('fly');
-            
-           // Check the value of id and set the appropriate URL
-          let redirectUrl;
-          switch (id) {
-            case 'about':
-              redirectUrl = 'aboutPage.html';
-              break;
-            case 'works':
-              redirectUrl = 'worksPage.html';
-              break;
-            case 'contact':
-              redirectUrl = 'contactPage.html';
-              break;
-            default:
-              redirectUrl = '#';
-          }
-          // Redirect to the determined URL
-          window.location.href = redirectUrl;
-        });
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
         }
 
-        </script>
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
 
-    </body>
-
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
+</body>
 </html>
