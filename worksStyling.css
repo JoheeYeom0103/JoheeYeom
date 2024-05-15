@@ -5,7 +5,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: url('subbackground-01.svg');
-    background-size: cover; /* Cover the entire background */
+    background-size: cover; 
     background-position: center;
 }
 
@@ -147,7 +147,7 @@ a {
     }
     
     #work0, #work1, #work2, #work3, #work4 {
-        width: 75%;
+        width: 80%;
     }
 
     #work2 img,
@@ -173,20 +173,23 @@ a {
         height: 100%;
         object-fit: cover; 
     }
-    
+
     #work1 .content, #work4 .content {
-        padding-left: 0;
-        max-width: 100%;
+        padding: 0;
+        min-width: none;
+        max-width: none;
     }
-    
+
     #work0 .content, #work1 .content, #work2 .content, #work3 .content, #work4 .content {
         display: block;
     	margin: 0;
         text-align: center;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    @media (max-width: 450px) {
-        
+    #work0 .description, #work1 .description, #work2 .description, #work3 .description, #work4 .description {
+        text-align: left;
     }
+
 }

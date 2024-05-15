@@ -19,7 +19,6 @@ body {
     height: 17em;
 }
 
-
 .paragraph {
     font-size: 1.2em;
     line-height: 1.8em;
@@ -59,33 +58,43 @@ body {
 
 #work1 {
     padding-top: 10em;
+    z-index: -999;
 }
 #work1, #work2, #work4{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%; /* Specify the desired width */
+    width: 65%; 
     box-sizing: border-box; 
-    margin: 0 auto 5em auto; /* Horizontally center the container */
+    margin: 0 auto; 
 }
 
 #work2, #work4 {
-    margin: 2em auto 5em auto;
+    margin: 0 auto 2em auto;
 }
 
 #work1 .image, #work2 .image, #work4 .image{
     text-align: center;
 }
 
+#work2 .image {
+    margin-right: 10em;
+}
+
 #work1 .content, #work2 .content, #work4 .content {
     padding-left: 3em;
-    width: 45%;
-    
+    margin-right: 3em;
+    min-width: 30%;
+    max-width: 40%;
+}
+
+#work4 .content {
+    margin-right: 17em;
 }
 
 #work2 .content {
-    padding-right: 3em;
-    min-width: 35%;
+    min-width: 30%;
+    max-width: 40%;
     text-align: right;
 }
 
@@ -110,7 +119,6 @@ body {
 
 #work4 .image {
     display: flex;
-
 }
 
 #work4 .image img {
@@ -151,9 +159,8 @@ body {
 }
 
 #work5 iframe, #work6 iframe {
-    width: 80%; /* Adjust the width as needed */
-    height: 30em; /* Adjust the height as needed */
-    
+    width: 70%; 
+    height: 20em; 
 }
 
 #work6 {
@@ -161,13 +168,13 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     #gallery {
         position: relative;
         left: 0;
-	}
-    
-	#worksLine {
+    }
+
+    #worksLine {
         display: none;
     }
 
@@ -175,14 +182,10 @@ body {
         margin-top: 10em;
     }
 
-    #work1, #work2, #work4 {
+    #work1, #work2, #work3, #work4 {
         display: block;
         width: 100%; 
         box-sizing: border-box; 
-	}
-   
-    #work2, #work3, #work4{
-        margin-top: 0;
     }
 
     #work4 .image {
@@ -192,18 +195,17 @@ body {
     #work4 .image img {
         margin-top: 1em;
     }
-    
+
     #work1 .image,  #work2 .image,  #work4 .image {
-    	margin-bottom: 2em;
+        margin: 0;
+        margin-bottom: 2em;
     }
 
-    #work3 img {
-        max-width: 100%;
-        height: auto;
+    #work3 .image {
         display: block;
+        margin: 0 2em;
     }
 
-    
     .image-container {
         position: relative;
         width: 100%;
@@ -219,18 +221,22 @@ body {
         height: 100%;
         object-fit: cover; 
     }
-    
+
     #work1 .content, #work2 .content, #work3 .content, #work4 .content {
-        display: block;
-    	margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: left;
-        width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 75%;
         min-width: 50%;
     }
 
     #work5 iframe, #work6 iframe {
         width: 100%;
-        height: 15em; 
     }
 
 }

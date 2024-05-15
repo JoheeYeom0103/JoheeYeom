@@ -20,7 +20,6 @@ body {
     height: 17em;
 }
 
-
 .paragraph {
     font-size: 1.2em;
     line-height: 1.8em;
@@ -67,23 +66,24 @@ body {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 1em; /* Vertical margin */
+    margin-bottom: 1em; 
 }
 
 .image-container {
     position: relative;
-    width: 70%;
+    width: 65%;
     display: flex;
-    flex-direction: column; /* Change to column */
+    flex-direction: column; 
 }
 
 .work .content {
     display: block;
-    margin: 0;
     text-align: left;
-    width: 80%;
+    width: 65%;
     padding-top: 1em;
+    margin-right: 5em;
 }
+
 .read-more-btn {
     background-color: #003853;
     color: white;
@@ -107,7 +107,6 @@ body {
 
 
 #work4 {
-    overflow: auto; 
     margin-bottom: 5em;
 }
 
@@ -117,7 +116,7 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     #gallery {
         position: relative;
 	}
@@ -148,6 +147,5 @@ body {
 
     #work4 iframe {
         width: 100%;
-        height: 15em; 
     }
 }

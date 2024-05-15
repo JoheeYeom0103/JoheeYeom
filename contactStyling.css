@@ -83,7 +83,7 @@ a:hover {
     font-family: Elsie;
     font-weight: bold;
     margin-bottom: 1em;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .form-group {
@@ -130,7 +130,7 @@ textarea:focus {
     outline: 0.2em solid #70ACDB;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
    
     #contactLine {
         display: none;
@@ -149,13 +149,12 @@ textarea:focus {
         margin-top: 2em; 
         position: relative;
         top: 10em;
-        left: 2.5em;
     }
 
    
    
     .get-in-touch {
-        margin-top: 10em;
+        margin: 10em 0;
         width: 80%;
     }
     
