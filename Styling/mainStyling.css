@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../Images/background-01.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 22%;
+}
+
+.letter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+    position: relative; 
+}
+
+.col {
+    display: none;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+/* Smooth out the transition */
+.non-col, .col {
+    transition: opacity 0.5s ease; /* Use opacity for a smooth transition */
+   
+}
+
+.non-col img, .col img {
+    height: 10rem;
+}
+
+
+/* When hovering over .letter-container, hide .col and show .non-col */
+.letter-container:hover > .non-col { 
+    opacity: 0;
+}
+
+.letter-container:hover > .col {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    #name {
+        justify-content: flex-start;
+        margin-top: 50%;
+        margin-left: 10%;
+        width: 75%;
+    }
+}
+
+

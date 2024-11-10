@@ -1,0 +1,94 @@
+#navigator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2em;
+    margin-top: 2em;
+    z-index: 999;
+}
+
+#about, #works, #contact {
+    margin-bottom: 0.6em;
+    width: fit-content;
+}
+
+#flower1, #flower2, #flower3 {
+    display: inline-block;
+}
+
+#flower1.rotate, #flower2.rotate, #flower3.rotate {
+    transform-origin: center;
+    animation: rotate 4s linear infinite;
+}
+
+#flower1.fly, #flower2.fly, #flower3.fly {
+    animation: fly 1.5s linear;
+    pointer-events: none;
+    position: fixed;
+    z-index: 999999;
+}
+
+#letter1, #letter2, #letter3 {
+    margin-left: 0.2em;
+}
+
+.flier img {
+    height: 1.9rem;
+}
+
+.letters img {
+    height: 2.3rem;
+}
+
+#menuCover {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menuCover img {
+    height: 17em;
+}
+
+@keyframes rotate {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+
+@keyframes fly {
+0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+}
+100% {
+    transform: translateX(calc(100vw - 3rem)) translateY(calc(100vh - 3rem)) scale(70) rotate(180deg);
+}
+}
+
+@media (max-width: 800px) {
+    #menuCover {
+        max-width: 100%;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 450px) {
+
+    #navigator {
+        margin-left: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    #menuCover img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .letters img {
+        height: 1.8rem;
+    }
+}

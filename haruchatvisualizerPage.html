@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel To Fill</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./Styling/navigatorStyling.css">
+    <link rel="stylesheet" href="./Styling/haruchatvisualizerStyling.css">
+    <!-- CSS Files -->
+
+    <!--Font Files-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Font Files-->
+</head>
+<body>
+
+    <div id="navigator">
+        <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
+            <span class="flier" id="flower1">
+                <img src="./Images/flower1-01.svg">
+            </span>
+            <span class="letters" id="letter1">
+                <img src="./Images/nav1-01.svg">
+            </span>
+        </div>
+
+        <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
+            <span class="flier" id="flower2">
+                <img src="./Images/flower2-01.svg">
+            </span>
+            <span class="letters" id="letter2">
+                <img src="./Images/nav2-01.svg">
+            </span>
+        </div>
+
+        <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
+            <span class="flier" id="flower3">
+                <img src="./Images/flower3-01.svg">
+            </span>
+            <span class="letters" id="letter3">
+                <img src="./Images/nav3-01.svg">
+            </span>
+        </div>
+
+        <div id="worksLine">
+            <a href="index.html" onmouseover="document.getElementById('logo').src='./Images/logo_hover.png'" onmouseleave="document.getElementById('logo').src='./Images/logo.png'">
+                <img id="logo" src="./Images/logo.png">
+            </a>
+            <img id="line" src="./Images/worksLine-01.svg">
+        </div>
+    </div>
+
+    <div id="menuCover">
+        <img src="./Images/menucover-01.svg">
+    </div>
+
+    <div id="gallery">
+
+        <figure class="work" id="work1"> 
+            <div class="image">
+                <div class="image-container">
+                    <img src="./Images/haruchatvisualizer.png" alt="ferris-wheel diagram">
+                    <div class="image-subcontainer">
+                        <img src="./Images/sankeydiagram.png" alt="sankey diagram">
+                        <img src="./Images/arcdiagram.png" alt="arc diagram">
+                    </div>
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="paragraph"><span class="emphasis">“Haru Chat Visualizer”</span> is a cross-platform app designed to help children monitor their conversations with the social AI robot, Haru. The app features an interactive, child-friendly data visualization of conversation analysis, displaying data such as topic names, discussion frequency, sentiment levels, and emotion labels. This project is developed in collaboration with Honda Research Institute, aiming to provide a fun and insightful way for children to engage with and understand their interactions with Haru.</p>
+            </figcaption>
+        </figure>
+
+
+        <figure class="work" id="work3">
+            <div class="image">
+                <div class="image-container">
+                    <img src="./Images/research_paper.png" alt="research paper">
+                    <img src="./Images/ferris-wheel_annotation.png" alt="diagram annotation">
+                </div>
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">Child-Oriented Data Visualization</p>
+                <p class="paragraph">User testing with elementary school children revealed that existing Sankey and arc diagrams caused cognitive overload and disengagement. Leveraging my experience in UX/UI design, I conducted a data-driven analysis of popular apps, pinpointing effective UI patterns and interaction models. I also created six color schemes to suit different age groups, genders, and neutral preferences, enhancing accessibility and inclusivity. By incorporating Central Focus Diagrams and Cognitive Mapping, I designed an intuitive, child-friendly interface that reduces cognitive load and sustains engagement, resulting in a visually cohesive and user-centered experience.</p>
+            </figcaption>
+        </figure>
+
+        <div class="work" id="work4">
+            <div class="image-container">
+                <img src="./Images/theme_personalisation.gif" alt="research paper">
+                <img src="./Images/two-waybinding.gif" alt="existing interface analysis">
+            </div>
+            <figcaption class="content">
+                <p class="emphasis">UI Design</p>
+                <p class="paragraph">The UI enables seamless two-way interaction between the transcript and topic bubbles, reducing cognitive load for children. Clicking a bubble scrolls the transcript to related content, while scrolling highlights topic bubbles with details like frequency, sentiment, and emotion. This synchronized design helps children intuitively access relevant information.
+                <br/><br/>To enhance engagement and avoid color biases, the UI includes customizable color themes, allowing children to personalize their interface. Research shows children value control over functionality and appearance, which strengthens their connection to the design. Black and white themes improve readability in various environments, supporting a flexible, inclusive experience that aligns with children’s need for personalization.</p>
+            </figcaption>
+        </div>
+    </div>
+
+    <script>
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
+        }
+
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
+        
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                
+                // Check the value of id and set the appropriate URL
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    color: #003853; 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Images/subbackground-01.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Change to column to stack content vertically */
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+#aboutLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+#logo {
+    height: 9vh;
+    position: relative;
+    top: 1.5em;
+    right: 2em;
+}
+
+#line {
+    height: 100vh;
+}
+
+.emphasis {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    margin-top: 5%;
+    margin-right: 15%;
+    padding-right: 10%;
+}
+
+#resume {
+    margin-top: -4em;
+    padding-bottom: 4em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume p {
+    margin-left: 1em;
+}
+#text {
+    z-index: 1; 
+    font-size: 1.1em;
+    color: #003853; 
+    margin: 10em 0em 5em 2em;
+    width: 35%; 
+    line-height: 1.8em;
+}
+
+#nameHighlight {
+    font-weight: bold;
+    font-size: 3em;
+    font-family: 'Elsie';
+}
+
+#picture {
+    margin-top: 5em;
+    z-index: -999;
+}
+
+@media (max-width: 800px) {
+    #aboutLine {
+        display: none;
+    }
+
+    #content {
+        /*How to center multiple contents in flex 
+        set the desired width 
+        -> set horizontal margin to be auto
+        -> justify-content: center */
+        /* flex-direction: column + justify-content: center --> hroizontal center
+           flex-direction: row + align-item: center -> vertical center*/
+        width: 70%; 
+        margin: 10em auto 0 auto; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #resume {
+        position: relative;
+    }
+
+    #text {
+        width: 100%;
+        margin-top: 1em; 
+    }    
+}
+
+@media (max-width: 400px) {
+    #content {
+        top: 24em;
+    }
+}
+
+  
+
+
+
+

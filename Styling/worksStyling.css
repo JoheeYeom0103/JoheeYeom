@@ -1,0 +1,202 @@
+body {
+    color: #003853; 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Images/subbackground-01.svg');
+    background-size: cover; 
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+#worksLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+#logo {
+    height: 9vh;
+    position: relative;
+    top: 1.5em;
+    right: 2em;
+}
+
+#line {
+    height: 100vh;
+}
+
+.content h2 {
+    font-size: 1.8em;
+    color: #003853; 
+}
+.content p {
+    font-size: 1.2em;
+    color: #003853; 
+}
+
+#gallery {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#haruchatvisualizer{
+    margin-top: 15em;
+}
+
+#feeltofill {
+    margin-top: 0em;
+}
+
+#beyondwords, #aslgarden {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    box-sizing: border-box; 
+    margin: 0em auto 5em auto; 
+}
+
+#beyondwords .image, #aslgarden .image{
+    text-align: center;
+}
+
+#beyondwords .content, #aslgarden .content {
+    padding-left: 3em;
+    padding-right: 10em;
+    min-width: 30%;
+    max-width: 50%;
+}
+
+#soundofcolour, #whaleforest, #feeltofill, #haruchatvisualizer, #haruchatvisualizer{
+    width: 70%; 
+    height: 100%;
+    padding-bottom: 5em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+#beyondwords .content, #soundofcolour .content, #whaleforest .content, #feeltofill .content, #haruchatvisualizer .content{
+    display: block;
+    width: 70%;
+}
+
+.read-more-btn {
+    background-color: #003853;
+    color: white;
+    padding: 0.6em;
+    border-color: transparent;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-family: 'Elsie';
+    font-size: 1em;
+}
+
+.read-more-btn:hover {
+    border-color: transparent;
+	background-color: #94B58E;
+}
+
+#feeltofill .image, #haruchatvisualizer .image {
+    z-index: -999;
+}
+
+@media (max-width: 1000px) {
+    #gallery {
+        position: relative;
+        left: 0;
+	}
+    
+	#worksLine {
+        display: none;
+    }
+
+    #menuCover {
+        max-width: 100%;
+        width: 100%; 
+    }
+
+    #haruchatvisualizer {
+        margin-top: 20em;
+    }
+    
+    #feeltofill {
+        margin-top: 0em;
+    }
+
+    #beyondwords, #aslgarden{
+        display: block;
+        margin-bottom: 5em;
+        width: 100%; 
+    }
+    
+    #feeltofill, #haruchatvisualizer, #beyondwords, #soundofcolour, #whaleforest, #aslgarden {
+        width: 80%;
+    }
+
+    #soundofcolour img,
+    #whaleforest img, 
+    #feeltofill img , #haruchatvisualizer img {
+        max-width: 100%;
+        display: block;
+    }
+
+    
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
+        overflow: hidden;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    #beyondwords .content, #aslgarden .content {
+        padding: 0;
+        min-width: none;
+        max-width: none;
+    }
+
+    #feeltofill .content, #haruchatvisualizer .content, #beyondwords .content, #soundofcolour .content, #whaleforest .content, #aslgarden .content {
+        display: block;
+    	margin: 0;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #feeltofill .description, #haruchatvisualizer .description, #beyondwords .description, #soundofcolour .description, #whaleforest .description, #aslgarden .description {
+        text-align: left;
+    }
+
+}

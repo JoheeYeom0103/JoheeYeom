@@ -6,8 +6,8 @@
     <title>Works Page</title>
     
     <!-- CSS Files -->
-    <link rel="stylesheet" href="navigatorStyling.css">
-    <link rel="stylesheet" href="worksStyling.css">
+    <link rel="stylesheet" href="./Styling/navigatorStyling.css">
+    <link rel="stylesheet" href="./Styling/worksStyling.css">
     <!-- CSS Files -->
 
     <!--Font Files-->
@@ -19,103 +19,117 @@
     <div id="navigator">
         <div id="about" onclick="startOpening('about')" onmouseout="stopSpinning('about')" onmouseover="startSpinning('about')">
             <span class="flier" id="flower1">
-                <img src="flower1-01.svg">
+                <img src="./Images/flower1-01.svg">
             </span>
             <span class="letters" id="letter1">
-                <img src="nav1-01.svg">
+                <img src="./Images/nav1-01.svg">
             </span>
         </div>
 
         <div id="works" onclick="startOpening('works')" onmouseout="stopSpinning('works')" onmouseover="startSpinning('works')">
             <span class="flier" id="flower2">
-                <img src="flower2-01.svg">
+                <img src="./Images/flower2-01.svg">
             </span>
             <span class="letters" id="letter2">
-                <img src="nav2-01.svg">
+                <img src="./Images/nav2-01.svg">
             </span>
         </div>
 
         <div id="contact" onclick="startOpening('contact')" onmouseout="stopSpinning('contact')" onmouseover="startSpinning('contact')">
             <span class="flier" id="flower3">
-                <img src="flower3-01.svg">
+                <img src="./Images/flower3-01.svg">
             </span>
             <span class="letters" id="letter3">
-                <img src="nav3-01.svg">
+                <img src="./Images/nav3-01.svg">
             </span>
         </div>
 
         <div id="worksLine">
             <a href="index.html" onmouseover="document.getElementById('logo').src='logo_hover.png'" onmouseleave="document.getElementById('logo').src='logo.png'">
-                <img id="logo" src="logo.png">
+                <img id="logo" src="./Images/logo.png">
             </a>
-            <img id="line" src="worksLine-01.svg">
+            <img id="line" src="./Images/worksLine-01.svg">
         </div>
         
     </div>
 
     <div id="menuCover">
-        <img src="menucover-01.svg">
+        <img src="./Images/menucover-01.svg">
     </div>
 
     <div id="gallery">
 
-        <figure class="work" id="work0">
+        <figure class="work" id="haruchatvisualizer">
             <div class="image">
                 <div class="image-container">
-                    <img src="feeltofill_main.jpg" alt="Feel to fill">
+                    <img src="./Images/haruchatvisualizer.png" alt="Haru Chat Visualizer">
+                </div>
+            </div>
+            <figcaption class="content">
+                <h2>Haru Chat Visualizer</h2>
+                <p class="sub-heading"> Cross Platform App | 2024</p>
+                <p class="description">In collaboration with Honda Research Institute, Haru Chat Visualizer enables children to monitor their conversation with social AI robot Haru through the child-oriented interactive data visualisation of conversation analysis data(topic name, discussion frequency, sentiment level, emotion label)</p>
+                <button class="read-more-btn"><a href="haruchatvisualizerPage.html">Read More<a></button>
+            </figcaption>
+        </figure>
+
+        <figure class="work" id="feeltofill">
+            <div class="image">
+                <div class="image-container">
+                    <img src="./Images/feeltofill_main.jpg" alt="Feel to fill">
                 </div>
             </div>
             <figcaption class="content">
                 <h2>Feel To Fill</h2>
                 <p class="sub-heading">Therapeutic Game | 2024</p>
                 <p class="description">As a planting hole is never wasted but used to bloom a new life, this game seeks to encourage the players to find hope in greater purpose their emotional holes can hold.</p>
-                <button class="read-more-btn"><a href="readmore0Page.html">Read More<a></button>
+                <button class="read-more-btn"><a href="feeltofillPage.html">Read More<a></button>
             </figcaption>
         </figure>
 
-        <figure class="work" id="work1">
+        <figure class="work" id="beyondwords">
             <div class="image">
-                <img src="beyondwordsmain.png" style="height: 25rem;">
+                <img src="./Images/beyondwordsmain.png" style="height: 25rem;">
             </div>
             <figcaption class="content">
                 <h2>Beyond Words</h2>
                 <p class="sub-heading">Interactive Media Projection | 2023</p>
                 <p class="description">An interactive dandelion that provides a multi-sensory exploration of the Korean language, Hangeul.</p>
-                <button class="read-more-btn"><a href="readmore1Page.html">Read More<a></button>
+                <button class="read-more-btn"><a href="beyondwordsPage.html">Read More<a></button>
             </figcaption>
         </figure>
 
-        <figure class="work" id="work2">
+        <figure class="work" id="soundofcolour">
             <div class="image">
                 <div class="image-container">
-                    <img src="soundofcolormain.jpg" alt="Sound Of Colour">
+                    <img src="./Images/soundofcolormain.jpg" alt="Sound Of Colour">
                 </div>
             </div>
             <figcaption class="content">
                 <h2>Sound Of Colour</h2>
                 <p class="sub-heading">VR game | 2023</p>
                 <p class="description">An interactive therapeutic VR game where the user becomes the teenage color-blind girl who dreams of becoming a foley artist.</p>
-                <button class="read-more-btn"><a href="readmore2Page.html">Read More<a></button>
+                <button class="read-more-btn"><a href="soundofcolourPage.html">Read More<a></button>
             </figcaption>
         </figure>
 
-        <figure class="work" id="work3">
+        <figure class="work" id="whaleforest">
             <div class="image">
                 <div class="image-container">
-                    <img src="whaleforestmain.jpg" alt="Whale Forest">
+                    <img src="./Images/whaleforestmain.jpg" alt="Whale Forest">
                 </div>
             </div>
             <figcaption class="content">
                 <h2>Whale Forest</h2>
                 <p class="sub-heading">VR game | 2023</p>
                 <p class="description">Interactive ambient VR, users fly on a whale, navigating through the enchanted whale forest where the ocean meets the space.</p>
-                <button class="read-more-btn"><a href="readmore3Page.html">Read More<a></button>
+                <button class="read-more-btn"><a href="whaleforestPage.html">Read More<a></button>
             </figcaption>
         </figure>
 
-        <figure class="work" id="work4">
+        <figure class="work" id="aslgarden">
             <div class="image">
-                <img src="aslgarden.jpg" style="height: 25rem;">
+                <img src="./Images/aslgarden.jpg" style="height: 25rem;">
             </div>
             <figcaption class="content">
                 <h2>ASL Garden</h2>
