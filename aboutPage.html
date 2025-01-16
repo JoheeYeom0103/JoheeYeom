@@ -69,5 +69,42 @@
         </a>
         <img id="line" src="./Images/aboutline-01.svg">
     </div>
+    <script>
+        function startSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('rotate');
+        }
+
+        function stopSpinning(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.remove('rotate');
+        }
+        
+        function startOpening(id) {
+            const flower = document.querySelector(`#${id} .flier`);
+            flower.classList.add('fly');
+            flower.addEventListener('animationend', function () {
+                flower.classList.remove('fly');
+                
+                // Check the value of id and set the appropriate URL
+                let redirectUrl;
+                switch (id) {
+                    case 'about':
+                        redirectUrl = 'aboutPage.html';
+                        break;
+                    case 'works':
+                        redirectUrl = 'worksPage.html';
+                        break;
+                    case 'contact':
+                        redirectUrl = 'contactPage.html';
+                        break;
+                    default:
+                        redirectUrl = '#';
+                }
+                // Redirect to the determined URL
+                window.location.href = redirectUrl;
+            });
+        }
+    </script>
 </body>
 </html>
