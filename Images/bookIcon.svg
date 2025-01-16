@@ -1,0 +1,11 @@
+<svg id="bookIconSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150" onclick="toggleBook()">
+  <!-- Left book cover -->
+  <rect id="leftCover" x="20" y="20" width="80" height="110" fill="#003853" stroke="#003853" stroke-width="2" />
+  <!-- Right book cover -->
+  <rect id="rightCover" x="100" y="20" width="80" height="110" fill="#f0f0f0" stroke="#003853" stroke-width="2" />
+  
+  <!-- Left page text "A" -->
+  <text id="leftText" x="40" y="75" font-family="Arial" font-size="48" fill="#f0f0f0">A</text>
+  <!-- Right page text "ㄱ" -->
+  <text id="rightText" x="120" y="75" font-family="Arial" font-size="48" fill="#003853">ㄱ</text>
+</svg>

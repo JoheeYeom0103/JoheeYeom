@@ -51,8 +51,12 @@
 
     <div id="content">
         <div id="picture"><img src="./Images/profileimage.jpg" style="height: 20em;"></div>
-        <!-- O  -->
-        <p id="text"><span id="nameHighlight">Johee Yeom</span> is a purpose-driven interactive media developer studying Media Studies and Computer Science at the University of British Columbia. With a focus on human-computer interaction (HCI) and UI/UX design research, Johee aspires to become a UX strategist. Her creative process is always centered on translating purposeful ideas into interactive functionalities across diverse media platforms.</p>
+        <p id="text">
+            <span id="nameHighlight">Johee Yeom</span> is a purpose-driven interactive media developer studying Media Studies and Computer Science at the University of British Columbia. With a focus on human-computer interaction (HCI) and UI/UX design research, Johee aspires to become a UX strategist. Her creative process is always centered on translating purposeful ideas into interactive functionalities across diverse media platforms.
+        </p>
+        <div id="icon">
+            <img src="./Images/bookIcon.svg" style="height: 3em; position: relative; top: -40px;" onclick="toggleBook()" alt="Toggle Language">
+        </div>
     </div>
 
     <div id="resume">
@@ -70,37 +74,31 @@
     </div>
 
     <script>
-        function startSpinning(id) {
-            const flower = document.querySelector(`#${id} .flier`);
-            flower.classList.add('rotate');
-        }
+        const leftCover = document.getElementById("leftCover");
+        const rightCover = document.getElementById("rightCover");
+        const leftText = document.getElementById("leftText");
+        const rightText = document.getElementById("rightText");
 
-        function stopSpinning(id) {
-            const flower = document.querySelector(`#${id} .flier`);
-            flower.classList.remove('rotate');
-        }
+        let isEnglish = true;
 
-        function startOpening(id) {
-            const flower = document.querySelector(`#${id} .flier`);
-            flower.classList.add('fly');
-            flower.addEventListener('animationend', function () {
-                flower.classList.remove('fly');
-                let redirectUrl;
-                switch (id) {
-                    case 'about':
-                        redirectUrl = 'aboutPage.html';
-                        break;
-                    case 'works':
-                        redirectUrl = 'worksPage.html';
-                        break;
-                    case 'contact':
-                        redirectUrl = 'contactPage.html';
-                        break;
-                    default:
-                        redirectUrl = '#';
-                }
-                window.location.href = redirectUrl;
-            });
+        function toggleBook() {
+            const textParagraph = document.getElementById("text");
+
+            if (isEnglish) {
+                textParagraph.innerHTML = 'Korean Text Here';
+                // leftCover.style.fill = "#f0f0f0";
+                // rightCover.setAttribute("fill", "#003853");
+                // leftText.setAttribute("fill", "#003853");
+                // rightText.setAttribute("fill", "#f0f0f0");
+            } else {
+                textParagraph.innerHTML = 'English Text Here';
+                // leftCover.style.fill= "#003853";
+                // rightCover.setAttribute("fill", "#f0f0f0");
+                // leftText.setAttribute("fill", "#f0f0f0");
+                // rightText.setAttribute("fill", "#003853");
+            }
+
+            isEnglish = !isEnglish;
         }
     </script>
 </body>
