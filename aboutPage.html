@@ -69,34 +69,5 @@
         </a>
         <img id="line" src="./Images/aboutline-01.svg">
     </div>
-
-    <script>
-        const leftCover = document.getElementById("leftCover");
-        const rightCover = document.getElementById("rightCover");
-        const leftText = document.getElementById("leftText");
-        const rightText = document.getElementById("rightText");
-
-        let isEnglish = true;
-
-        function toggleBook() {
-            const textParagraph = document.getElementById("text");
-
-            if (isEnglish) {
-                textParagraph.innerHTML = 'Korean Text Here';
-                // leftCover.style.fill = "#f0f0f0";
-                // rightCover.setAttribute("fill", "#003853");
-                // leftText.setAttribute("fill", "#003853");
-                // rightText.setAttribute("fill", "#f0f0f0");
-            } else {
-                textParagraph.innerHTML = 'English Text Here';
-                // leftCover.style.fill= "#003853";
-                // rightCover.setAttribute("fill", "#f0f0f0");
-                // leftText.setAttribute("fill", "#f0f0f0");
-                // rightText.setAttribute("fill", "#003853");
-            }
-
-            isEnglish = !isEnglish;
-        }
-    </script>
 </body>
 </html>
